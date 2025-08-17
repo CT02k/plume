@@ -1,0 +1,185 @@
+@import "tailwindcss";
+@import "../themes/default.css";
+
+@theme {
+  --color-plume0: var(--nord0);
+  --color-plume1: var(--nord1);
+  --color-plume2: var(--nord2);
+  --color-plume3: var(--nord3);
+  --color-plume4: var(--nord4);
+  --color-plume5: var(--nord5);
+  --color-plume6: var(--nord6);
+  --color-plume7: var(--nord7);
+  --color-plume8: var(--nord8);
+  --color-plume9: var(--nord9);
+  --color-plume10: var(--nord10);
+  --color-plume11: var(--nord11);
+  --color-plume12: var(--nord12);
+  --color-plume13: var(--nord13);
+  --color-plume14: var(--nord14);
+  --color-plume15: var(--nord15);
+}
+
+body {
+  @apply bg-plume0 flex flex-col min-h-screen items-center;
+}
+
+header {
+  @apply w-80 md:w-[32rem] mt-4 text-plume4 p-2.5 flex items-center justify-center;
+}
+
+header nav {
+  @apply flex items-center gap-4;
+}
+
+.poweredby-text {
+  @apply flex items-center justify-center text-base text-plume6 mb-4 gap-2;
+}
+
+.posts {
+  @apply flex flex-col flex-1 items-center justify-center w-full gap-10 mt-16;
+}
+
+.post-manage {
+  @apply bg-plume2 rounded-lg pb-4 w-80 md:w-[32rem] cursor-pointer;
+}
+
+.post-manage img {
+  @apply w-full rounded-t-md mb-4 object-cover h-[135px] transition-all duration-1000;
+}
+
+.post-manage h2 {
+  @apply text-plume7 text-2xl font-bold mb-2 px-4;
+}
+
+.post-manage p {
+  @apply text-plume6 text-base px-4;
+}
+
+.post-manage .tags {
+  @apply flex flex-wrap gap-2 px-4 mt-2;
+}
+
+.post-manage .tags .tag {
+  @apply bg-plume3 text-plume6 text-sm px-2 py-1 rounded-lg;
+}
+
+.post {
+  @apply bg-plume2 rounded-lg pb-4 w-80 md:w-[32rem] cursor-pointer;
+}
+
+.post:hover img {
+  @apply h-[270px];
+}
+
+.post img {
+  @apply w-full rounded-t-md mb-4 object-cover h-[135px] transition-all duration-1000;
+}
+
+.post h2 {
+  @apply text-plume7 text-2xl font-bold mb-2 px-4;
+}
+
+.post p {
+  @apply text-plume6 text-base px-4;
+}
+
+.post .tags {
+  @apply flex flex-wrap gap-2 px-4 mt-2;
+}
+
+.post .tags .tag {
+  @apply bg-plume3 text-plume6 text-sm px-2 py-1 rounded-lg;
+}
+
+.icon-bg {
+  @apply bg-plume1 text-plume4 border border-plume2 w-16 h-16 rounded-lg flex items-center justify-center;
+}
+
+input {
+  @apply bg-plume1 text-plume4 w-full px-4 py-2 rounded-lg border border-plume3 focus:outline-none focus:ring-2 focus:ring-plume8 transition duration-300;
+}
+
+textarea {
+  @apply bg-plume1 text-plume4 w-full px-4 py-2 rounded-lg border border-plume3 focus:outline-none focus:ring-2 focus:ring-plume8 transition duration-300;
+}
+
+label {
+  @apply text-plume6 text-base;
+}
+
+.form-container {
+  @apply flex flex-col gap-4 w-full mt-10;
+}
+
+.input-group {
+  @apply flex flex-col gap-2;
+}
+
+button.button-primary {
+  @apply bg-plume8 text-plume0 px-8 py-2 rounded-lg cursor-pointer hover:bg-plume9 disabled:bg-plume8/50 transition duration-300;
+}
+
+.steps {
+  @apply flex items-center justify-center gap-4 mt-10;
+}
+
+.step-1, .step-2, .step-3 {
+  @apply flex items-center justify-center bg-plume1 text-plume4 h-12 w-12 rounded-full;
+}
+
+.step-1.checked, .step-2.checked, .step-3.checked {
+  @apply bg-plume8 text-plume0;
+}
+
+.step {
+  @apply flex items-center justify-center text-plume6 p-4 rounded-lg bg-plume1 my-10;
+}
+
+.step h2 {
+  @apply text-2xl font-bold;
+}
+
+.step p {
+  @apply text-base mb-3;
+}
+
+.actions {
+  @apply flex items-center justify-center gap-4;
+}
+
+.actions button {
+  @apply bg-plume8 text-plume0 px-6 py-2 rounded-lg cursor-pointer hover:bg-plume9 disabled:bg-plume8/50 transition duration-300;
+}
+
+.post-card {
+  @apply bg-plume1 rounded-lg flex flex-col w-full h-auto mt-16;
+}
+
+.post-card img {
+  @apply rounded-t-lg w-full object-cover h-[135px] transition-all duration-300
+}
+
+.post-card img:hover {
+  @apply h-[270px];
+}
+
+.post-card h1 {
+  @apply text-3xl font-bold text-plume8 px-4 mt-5
+}
+
+.post-card p {
+  @apply text-plume4 px-4
+}
+
+.post-card .tags {
+  @apply flex flex-wrap gap-2 px-4 my-5
+}
+
+.post-card .tags .tag {
+  @apply bg-plume3 text-plume6 text-sm px-2 py-1 rounded-lg;
+}
+
+.text-box > h2 {
+  @apply flex flex-col gap-1
+}
