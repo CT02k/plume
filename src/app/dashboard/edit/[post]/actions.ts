@@ -18,9 +18,10 @@ export async function handleSubmit(formData: FormData) {
 
   let content = existingPost?.content ?? "";
 
-  if (file && file.type === "text/markdown") {
+  if (file) {
     const contentBuffer = await file.arrayBuffer();
     content = Buffer.from(contentBuffer).toString("utf-8");
+    console.log(content)
   }
 
   const tags = tagsRaw.split(",").map(tag => tag.trim());
