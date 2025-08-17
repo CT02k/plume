@@ -33,7 +33,7 @@ export default function DashboardPage() {
 
   const handleDelete = async (id: string) => {
     await fetch(`/api/posts/${id}/delete`, {
-      method: "DELETE",
+      method: "POST",
     });
 
     setPosts((prev) => prev.filter((post) => post.id !== id));
