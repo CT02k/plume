@@ -3,12 +3,12 @@ import prisma from "@/utils/prisma";
 import { handleSubmit } from "./actions";
 
 type EditPageProps = {
-  params: { post: string };
+  params: Promise<{ post: string }>;
 };
 
 export default async function EditPage({ params }: EditPageProps) {
-  const slug = params.post;
-
+  const { post: slug } = await params;
+  
   const post = await prisma.post.findUnique({
     where: { url: slug },
   });
@@ -114,3 +114,4 @@ export default async function EditPage({ params }: EditPageProps) {
     </div>
   );
 }
+
