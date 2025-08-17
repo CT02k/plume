@@ -4,8 +4,13 @@ import prisma from "./prisma";
 import bcrypt from "bcrypt";
 
 const alreadyHaveAdmin = async () => {
-  const count = await prisma.admin.count();
-  return count > 0;
+  try {
+    const admin = await prisma.admin.findFirst();
+    return !!admin;
+  } catch (err) {
+    console.error('Error checking for existing admin:', err);
+    return false; // ou `throw err` se preferir propagar o erro
+  }
 };
 
 async function createAdmin(username: string, password: string) {
